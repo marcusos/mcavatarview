@@ -1,4 +1,91 @@
-mcavatarview
-============
+h1. MCAvatarView
 
-A simple, flat and beautiful Rounded Avatar (image) View for your iOS app.
+
+MCAvatarView is a simple, flat and beautiful Rounded Avatar (image) View for your iOS app. It
+is a free control from a big project called "MyAppControls":http://www.binpress.com/profile/myappcontrols/30934 
+
+!https://www.dropbox.com/s/9xhxr61wf7bmjii/mcavatarview.png`!
+
+h2. Features
+
+* Customized border color and width for slices (default color supported)
+* Enable/Disable shadow
+* On touch delegate handle
+* Alpha effect on touch
+* customizable image
+* ARC support
+* interface builder support
+
+h2. Installation
+
+* Drag the @mcavatarview/MCAvatarView@ folder into your project. 
+* Add the *QuartzCore* framework to your project. 
+* Import as usual: #import "MCAvatarView.h"
+
+h3. Setup
+
+MCAvatarView can be added to your view either from the Interface Builder or through code.
+
+Interface Builder (Xcode 5):
+
+* Open the Storyboard or Xib file you want to add the MCAvataView to.
+* Drag a new UIView from the Object Library into your view controller.
+* Resize and position your new UIView as you wish (recommended a square size).
+* Make sure the new UIView is selected and choose the Identity Inspector tab on Xcode's the Utilities view (on the right).
+* Change the class from UIView to MCAvatarView.
+* On the view controller's header file create an IBOutlet property of the type MCAvatarView and link it to the object you created on the Interface Builder.
+* Set the right image of the avatar view in the View Controller code.
+
+Through Code:
+
+CGRect frame = CGRectMake(x, y, width, height);
+MCAvataView *avatarView = [[MCAvataView alloc] initWithFrame:frame];
+avatarView.image = [UIImage imageNamed:@"avatar-image.png"];
+[self.view addSubview:avatarView];
+
+h2. Customization
+
+(see sample Xcode project in @/MCAvatarViewMaster@)
+
+MCAvatarView properties:
+
+<pre>
+@property (nonatomic, strong) UIImage *image; //required, default is NIL
+
+@property (nonatomic, assign) id <MCAvatarViewDelegate>delegate; // default is NIL
+@property (nonatomic) BOOL shadowEnable; // default is YES
+@property (nonatomic) CGFloat borderWidth; // default is self.frame.size.width*0.05;
+@property (nonatomic, strong) UIColor *borderColor; // default is [UIColor whiteColor]
+
+@property (nonatomic, strong) UIColor *borderColor; // inherited from UIView, default is YES
+</pre>
+
+Implement  Delegate Method (OPTIONAL):
+
+<pre>
+-(void)avatarViewOnTouchAction:(MCAvatarView *)avatarView;
+</pre>
+
+Example usage:
+
+<pre>
+avatarView.image = [UIImage imageNamed:(@"the-godfather.png")];
+avatarView.delegate = self;
+avatarView.borderWidth =  self.frame.size.width*0.06;
+avatarView.borderColor = [UIColor grayColor];
+avatarView.shadowEnable = NO;
+
+//Delegate Touch Event Action implementation
+-(void)avatarViewOnTouchAction:(MCAvatarView *)avatarView {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MCAvatarView"
+                                                    message:@"AvatarView Touched!"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+</pre>
+
+h2. Credits
+
+MCAvatarView is brought to you by "MyAppControls":http://xystudio.cc team.
