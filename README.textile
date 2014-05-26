@@ -71,6 +71,7 @@ Implement  Delegate Method (OPTIONAL):
 Example usage:
 
 <pre>
+//Setting properties values
 avatarView.image = [UIImage imageNamed:(@"the-godfather.png")];
 avatarView.delegate = self;
 avatarView.borderWidth =  self.frame.size.width*0.06;
