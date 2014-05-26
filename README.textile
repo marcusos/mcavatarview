@@ -4,7 +4,7 @@ h1. MCAvatarView
 MCAvatarView is a simple, flat and beautiful Rounded Avatar (image) View for your iOS app. It
 is a free control from a big project called "MyAppControls":http://www.binpress.com/profile/myappcontrols/30934 .
 
-!https://www.dropbox.com/s/9xhxr61wf7bmjii/mcavatarview.png!
+!https://dl.dropboxusercontent.com/s/9xhxr61wf7bmjii/mcavatarview.png!
 
 h2. Features
 
