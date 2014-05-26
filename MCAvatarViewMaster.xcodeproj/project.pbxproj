@@ -21,6 +21,8 @@
 		58B29A90192C293900196DD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B29A72192C293900196DD5 /* UIKit.framework */; };
 		58B29A98192C293900196DD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 58B29A96192C293900196DD5 /* InfoPlist.strings */; };
 		58B29A9A192C293900196DD5 /* MCAvatarViewMasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B29A99192C293900196DD5 /* MCAvatarViewMasterTests.m */; };
+		58B29AA6192C296A00196DD5 /* MCAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B29AA5192C296A00196DD5 /* MCAvatarView.m */; };
+		58B29AAC192C322C00196DD5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B29AAB192C322C00196DD5 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		58B29A95192C293900196DD5 /* MCAvatarViewMasterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MCAvatarViewMasterTests-Info.plist"; sourceTree = "<group>"; };
 		58B29A97192C293900196DD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		58B29A99192C293900196DD5 /* MCAvatarViewMasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCAvatarViewMasterTests.m; sourceTree = "<group>"; };
+		58B29AA4192C296A00196DD5 /* MCAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAvatarView.h; sourceTree = "<group>"; };
+		58B29AA5192C296A00196DD5 /* MCAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAvatarView.m; sourceTree = "<group>"; };
+		58B29AAB192C322C00196DD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B29AAC192C322C00196DD5 /* QuartzCore.framework in Frameworks */,
 				58B29A71192C293900196DD5 /* CoreGraphics.framework in Frameworks */,
 				58B29A73192C293900196DD5 /* UIKit.framework in Frameworks */,
 				58B29A6F192C293900196DD5 /* Foundation.framework in Frameworks */,
@@ -82,6 +88,7 @@
 		58B29A62192C293900196DD5 = {
 			isa = PBXGroup;
 			children = (
+				58B29AA3192C294200196DD5 /* MCAvatarView */,
 				58B29A74192C293900196DD5 /* MCAvatarViewMaster */,
 				58B29A93192C293900196DD5 /* MCAvatarViewMasterTests */,
 				58B29A6D192C293900196DD5 /* Frameworks */,
@@ -101,6 +108,7 @@
 		58B29A6D192C293900196DD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58B29AAB192C322C00196DD5 /* QuartzCore.framework */,
 				58B29A6E192C293900196DD5 /* Foundation.framework */,
 				58B29A70192C293900196DD5 /* CoreGraphics.framework */,
 				58B29A72192C293900196DD5 /* UIKit.framework */,
@@ -150,6 +158,15 @@
 				58B29A96192C293900196DD5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58B29AA3192C294200196DD5 /* MCAvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				58B29AA4192C296A00196DD5 /* MCAvatarView.h */,
+				58B29AA5192C296A00196DD5 /* MCAvatarView.m */,
+			);
+			path = MCAvatarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +270,7 @@
 				58B29A7F192C293900196DD5 /* MCAppDelegate.m in Sources */,
 				58B29A85192C293900196DD5 /* MCViewController.m in Sources */,
 				58B29A7B192C293900196DD5 /* main.m in Sources */,
+				58B29AA6192C296A00196DD5 /* MCAvatarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

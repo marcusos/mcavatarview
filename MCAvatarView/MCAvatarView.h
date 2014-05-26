@@ -10,27 +10,16 @@
 
 @class MCAvatarView;
 
-
 @protocol MCAvatarViewDelegate <NSObject>
-
-@optional
 -(void)avatarViewOnTouchAction:(MCAvatarView *)avatarView;
--(void)avatarViewOnImagePickedAction:(MCAvatarView *)avatarView;
-
 @end
 
-@interface MCAvatarView : UIImageView <UIImagePickerControllerDelegate,UIActionSheetDelegate,
-UINavigationControllerDelegate>
+@interface MCAvatarView : UIView
 
 @property (nonatomic, assign) id <MCAvatarViewDelegate>delegate;
-@property (nonatomic) BOOL shadowEnable;
-@property (nonatomic) CGFloat borderWidth;
-@property (nonatomic, strong) UIColor *borderColor;
-@property (nonatomic) BOOL showImagePikerOnTouch;
-
-@property (nonatomic, weak) UIViewController * presentingViewController;
-
--(id)initWithFrame:(CGRect)frame;
+@property (nonatomic) BOOL shadowEnable; // default is YES
+@property (nonatomic) CGFloat borderWidth; // default is [UIColor whiteColor]
+@property (nonatomic, strong) UIColor *borderColor; // default is [UIColor whiteColor]
+@property (nonatomic, strong) UIImage *image; // default is NIL
 
 @end
-
