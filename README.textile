@@ -30,7 +30,7 @@ Interface Builder (Xcode 5):
 
 * Open the Storyboard or Xib file you want to add the MCAvataView to.
 * Drag a new UIView from the Object Library into your view controller.
-* Resize and position your new UIView as you wish (recommended a square size).
+* Resize and position your new UIView as you wish (recommended a square size!).
 * Make sure the new UIView is selected and choose the Identity Inspector tab on Xcode's the Utilities view (on the right).
 * Change the class from UIView to MCAvatarView.
 * On the view controller's header file create an IBOutlet property of the type MCAvatarView and link it to the object you created on the Interface Builder.
@@ -39,7 +39,7 @@ Interface Builder (Xcode 5):
 Through Code:
 
 <pre>
-CGRect frame = CGRectMake(x, y, width, height);
+CGRect frame = CGRectMake(x, y, width, height); //IMPORTANT: recommended a square size!
 MCAvataView *avatarView = [[MCAvataView alloc] initWithFrame:frame];
 avatarView.image = [UIImage imageNamed:@"avatar-image.png"];
 [self.view addSubview:avatarView];
