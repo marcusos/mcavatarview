@@ -8,7 +8,7 @@ is a free control from a big project called "MyAppControls":http://www.binpress.
 
 h2. Features
 
-* Customized border color and width for slices (default color supported)
+* Customized border color and border width
 * Enable/Disable shadow
 * On touch delegate handle
 * Alpha effect on touch
@@ -38,10 +38,12 @@ Interface Builder (Xcode 5):
 
 Through Code:
 
+<pre>
 CGRect frame = CGRectMake(x, y, width, height);
 MCAvataView *avatarView = [[MCAvataView alloc] initWithFrame:frame];
 avatarView.image = [UIImage imageNamed:@"avatar-image.png"];
 [self.view addSubview:avatarView];
+</pre>
 
 h2. Customization
 
@@ -88,4 +90,4 @@ avatarView.shadowEnable = NO;
 
 h2. Credits
 
-MCAvatarView is brought to you by "MyAppControls":http://xystudio.cc team.
+MCAvatarView is brought to you by "MyAppControls":http://www.binpress.com/profile/myappcontrols/30934 team.
